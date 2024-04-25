@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import { Spotlight } from "./Spotlight";
-
+import Image from "next/image";
+import { Title } from "./Title";
 export const HeroSection = () => {
   return (
     <div className="min-h-[80vh] flex flex-col-reverse gap-14 lg:gap-0 lg:flex-row items-center justify-between">
@@ -23,26 +24,18 @@ export const HeroSection = () => {
           href={"mailto:zakaria.ouldhamouda.dz@gmail.com"}
           className="inline-block"
         >
-          <div>
-            <h1 className="text-3xl font-bold hover:text-green-500">
-              Contact Me !
-            </h1>
-            <div className="w-full h-2 bg-green-500 rounded-full "></div>
-            <div className="w-full h-2 bg-indigo-500 rounded-full translate-x-2 "></div>
-          </div>
+          <Title text="Contact Me !" />
         </Link>
       </div>
       <div>
-        <div className="w-73 h-72  space-y-3 -rotate-[30deg]">
-          <div className="flex gap-3 translate-x-8">
-            <div className="w-32 h-32 rounded-2xl bg-green-500"></div>
-            <div className="w-32 h-32 rounded-full bg-indigo-500"></div>
-          </div>
-          <div className="flex gap-3 -translate-x-8">
-            <div className="w-32 h-32 rounded-2xl bg-indigo-500"></div>
-
-            <div className="w-32 h-32 rounded-full bg-green-500"></div>
-          </div>
+        <div className=" h-45 w-45 md:w-60 md:h-60 lg:w-96 lg:h-96 rounded-full overflow-hidden  ">
+          {/* Replace "profile-photo.png" with your actual image filename */}
+          <Image
+            src="/images/port.png"
+            alt="Your Profile Photo"
+            width={370}
+            height={300}
+          />
         </div>
       </div>
     </div>
